@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CqrsDemo.Domain.Entities;
 using CqrsDemo.Infrastructure.EntityConfiguration;
 using Microsoft.EntityFrameworkCore;
 
