@@ -9,7 +9,7 @@ services:
       ACCEPT_EULA: "Y"
       SA_PASSWORD: "TestDb123!"
     ports:
-      - 1433:1433
+      - 6660:1433
     volumes:
       - database:/var/opt/mssql
       
