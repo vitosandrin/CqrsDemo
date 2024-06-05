@@ -10,5 +10,4 @@ public interface IUnityOfWork
 {
     IMemberRepository MemberRepository { get; }
     Task CommitAsync();
-    Task Rollback();
 }
