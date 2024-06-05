@@ -3,16 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CqrsDemo.Infrastructure.EntityConfiguration;
 using Microsoft.EntityFrameworkCore;
 
 namespace CqrsDemo.Infrastructure.Context;
 
-public class AppDbContext : DbContext
+public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
 {
-    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
-    {
-    }
-
     public DbSet<Member> Members { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
