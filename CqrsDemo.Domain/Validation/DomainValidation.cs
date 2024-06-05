@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace CqrsDemo.Domain.Validation;
 
-public class DomainValidation : Exception
+public class DomainValidation(string error) : Exception(error)
 {
-    public DomainValidation(string error) : base(error)
-    {
-    }
-
     public static void When(bool hasError, string error)
     {
         if (hasError)

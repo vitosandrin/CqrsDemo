@@ -1,7 +1,8 @@
 ﻿
-using CqrsDemo.Domain.Entities;
 using CqrsDemo.Domain.Validation;
 using System.Text.Json.Serialization;
+
+namespace CqrsDemo.Domain.Entities;
 
 public sealed class Member : Entity
 {
