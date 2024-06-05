@@ -1,4 +1,5 @@
 ﻿using CqrsDemo.Domain.Abstractions;
+using CqrsDemo.Domain.Entities;
 using CqrsDemo.Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
 using System;
