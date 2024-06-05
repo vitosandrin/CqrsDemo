@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\CqrsDemo.Application\CqrsDemo.Application.csproj" />
+		<ProjectReference Include="..\CqrsDemo.Domain\CqrsDemo.Domain.csproj" />
+		<ProjectReference Include="..\CqrsDemo.Infrastructure\CqrsDemo.Infrastructure.csproj" />
+	</ItemGroup>
+
+</Project>
