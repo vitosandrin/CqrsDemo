@@ -8,14 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CqrsDemo.Infrastructure.Repositories;
-public class MemberRepository : IMemberRepository
+public class MemberRepository(AppDbContext _db) : IMemberRepository
 {
-    protected readonly AppDbContext db;
+    protected readonly AppDbContext db = _db;
 
-    public MemberRepository(AppDbContext _db)
-    {
-        db = _db;
-    }
     public async Task<Member> GetMemberById(int id)
     {
         var member = await db.Members.FindAsync(id);
