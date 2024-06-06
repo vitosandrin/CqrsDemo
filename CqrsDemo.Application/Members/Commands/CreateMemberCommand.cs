@@ -13,19 +13,13 @@ namespace CqrsDemo.Application.Members.Commands;
 
 public class CreateMemberCommand : MemberCommandBase
 {
-    public class CreateMemberCommandHandler : IRequestHandler<CreateMemberCommand, Member>
-    {
-        private readonly IUnityOfWork _unitOfWork;
-        private readonly IValidator<CreateMemberCommand> _validator;
-        private readonly IMediator _mediator;
-        public CreateMemberCommandHandler(IUnityOfWork unitOfWork,
+    public class CreateMemberCommandHandler(IUnityOfWork unitOfWork,
                                           IValidator<CreateMemberCommand> validator,
-                                          IMediator mediator)
-        {
-            _unitOfWork = unitOfWork;
-            _validator = validator;
-            _mediator = mediator;
-        }
+                                          IMediator mediator) : IRequestHandler<CreateMemberCommand, Member>
+    {
+        private readonly IUnityOfWork _unitOfWork = unitOfWork;
+        private readonly IValidator<CreateMemberCommand> _validator = validator;
+        private readonly IMediator _mediator = mediator;
         public async Task<Member> Handle(CreateMemberCommand request, CancellationToken cancellationToken)
         {
             _validator.ValidateAndThrow(request);
