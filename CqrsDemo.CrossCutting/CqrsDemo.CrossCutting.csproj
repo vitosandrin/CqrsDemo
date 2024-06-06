@@ -7,6 +7,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.1" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<ProjectReference Include="..\CqrsDemo.Application\CqrsDemo.Application.csproj" />
 		<ProjectReference Include="..\CqrsDemo.Domain\CqrsDemo.Domain.csproj" />
 		<ProjectReference Include="..\CqrsDemo.Infrastructure\CqrsDemo.Infrastructure.csproj" />
