@@ -1,18 +1,17 @@
 ﻿using CqrsDemo.Application.Members.Commands;
-using CqrsDemo.UnitTests.UnityOfWorkTests;
+using CqrsDemo.UnitTests.;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CqrsDemo.UnitTests.Member.Commands.CreateMemberCommand;
+namespace CqrsDemo.UnitTests;
 
 public class CreateMemberCommandSetup
 {
-    public readonly MemberCommandBase _memberCommandBase;
     public CreateMemberCommandSetup()
     {
-        var uow = new UnityOfWorkSetup();
+        var uow = new UnityofWorkSetup();
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CqrsDemo.UnitTests.Member.CreateMemberCommand;
+namespace CqrsDemo.UnitTests;
 
 public class CreateMemberCommandTest
 {
