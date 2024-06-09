@@ -59,4 +59,15 @@ public class CreateMemberCommandTest(CreateMemberCommandSetup createMemberComman
 
         Assert.Equal(_member.FirstName, member.FirstName);
     }
+
+    [Fact]
+    public void DeleteMemberCommand_ReturnSucess()
+    {
+        var member = new DeleteMemberCommand
+        {
+            Id = 1
+        };
+
+        Assert.Equal(1, member.Id);
+    }
 }
