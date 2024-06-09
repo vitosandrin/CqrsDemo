@@ -1,5 +1,8 @@
 ﻿using CqrsDemo.Application.Members.Commands;
 using CqrsDemo.UnitTests;
+using FluentValidation;
+using MediatR;
+using Moq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +13,9 @@ namespace CqrsDemo.UnitTests;
 
 public class CreateMemberCommandSetup
 {
-    public readonly CreateMemberCommand _createMemberCommand;
+    public readonly UnityOfWorkSetup _uow;
     public CreateMemberCommandSetup()
     {
-        var uow = new UnityOfWorkSetup();
-        var _createMemberCommand = new CreateMemberCommand(uow._unitOfWork, uow._mediator);
+        _uow = new UnityOfWorkSetup();
     }
 }
