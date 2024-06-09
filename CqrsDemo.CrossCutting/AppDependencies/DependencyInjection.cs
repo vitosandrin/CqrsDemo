@@ -40,7 +40,9 @@ public static class DependencyInjection
 
         services.AddMediatR(cfg =>
         {
+            //register all handlers from the assembly
             cfg.RegisterServicesFromAssemblies(handlersAssembly);
+            //register all validators from the assembly
             cfg.AddOpenBehavior(typeof(ValidationBehaviour<,>));
         });
 
